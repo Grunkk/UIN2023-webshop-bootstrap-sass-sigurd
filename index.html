@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO-DUDES WEBSHOP</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html">
+                <img class="img" src="css/images/LD_logo.svg" alt="LEGO-DUDES" />
+            </a>
+            <figure id="cart" role="button" onClick="toggleCart()">
+                <span class="label">0</span>
+                <img src="css/images/legocart.svg" alt="Handlekurv" />
+            </figure>
+            <section id="cartview" class="hidden">
+                <h3>Din handlevogn</h3>
+                <ul>
+                    <li>Din handlevogn er tom.</li>
+                </ul>
+                <p>Totalt: Kr. <span id="total">0</span>,-</p>
+            </section>
+        </header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a href="city.html">City</a>
+            </li>
+            <li class="nav-item">
+                <a class="active" href="ninjago.html">Ninjago</a>
+            </li>
+            <li class="nav-item">
+                <a href="castle-knights.html">Caste and Knights</a>
+            </li>
+            <li class="nav-item">
+                <a href="marine-pirates.html">Marine and Pirates</a>
+            </li>
+            <li class="nav-item">
+                <a href="movie-characters.html">Movie characters</a>
+            </li>
+        </ul>
+    </div>
+        </nav>
+        <main>
+            <h2>Ninjago</h2>
+            <div class="row" id="product-list">
+            <article class="product-card col-3">
+                <img src="css/images/PROD_dragon_zane.webp" alt="Produktbilde av Zane" />
+                <a href="ninjago.html">Ninjago</a>
+                <h3>Dragon Zane</h3>
+                <span class="price">Kr. 89,-</span>
+                <button onClick="addToCart('Dragon Zane', 89, 1)">Legg i handlekurv</button>
+            </article>
+            <article class="product-card">
+                <img src="css/images/PROD_lil_ninja.webp" alt="Produktbilde av Lil Ninja" />
+                <a href="ninjago.html">Ninjago</a>
+                <h3>Lil'Ninja</h3>
+                <span class="price">Kr. 89,-</span>
+                <button>Legg i handlekurv</button>
+            </article>
+            <article class="product-card">
+                <img src="css/images/PROD_master_wu.webp" alt="Produktbilde av Mester Wu" />
+                <a href="ninjago.html">Ninjago</a>
+                <h3>Mester Wu</h3>
+                <span class="price">Kr. 109,-</span>
+                <button>Legg i handlekurv</button>
+            </article>
+            <article class="product-card">
+                <img src="css/images/PROD_scuba_kai.webp" alt="Produktbilde av Scuba Kai" />
+                <a href="ninjago.html">Ninjago</a>
+                <h3>Scuba Kai</h3>
+                <span class="price">Kr. 89,-</span>
+                <button>Legg i handlekurv</button>
+            </article>
+        </div>
+        </main>
+    </div>
+    <script src="legodudes.js"></script>
+</body>
+</html>

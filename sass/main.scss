@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "colors";
+
+
+/*body {
+    background-color: $legoyellow;
+    background-image: url('images/mainbackground.png');
+    font-family: $legofont;
+    font-size: $rootsize;
+}
+
+.container {
+    background-color: $white;
+    max-width: $maxwidth;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    a{
+        width: 100%;
+        max-width: 250px;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}*/
+body {
+    background-color: $legoyellow;
+    background-image: url('images/mainbackground.png');
+    font-family: $legofont;
+    font-size: $rootsize;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+div.container {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: 0 auto;
+    background-color: $white;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    a{
+       width: 100%;
+        max-width: 250px;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+
+#cart {
+    position: relative;
+    width: 100%;
+    max-width: 50px;
+}
+#cart .label {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    color: $white;
+    background-color: $red;
+    position: absolute;
+    top: -1.3rem;
+    left: -1.3rem;
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+
+nav {
+    width: 100%;
+    background-color: $red;
+    display: flex;
+}
+nav a {
+    color: $white;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-bottom: 5px solid $red;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: ease-in-out .4s;
+}
+nav a:hover {
+    color: $legoyellow;
+    border-color: $legoyellow;
+}
+nav a.active {
+    background-color: $legoyellow;
+    border-color: $black;
+    color: $black;
+}
+nav a.active:hover {
+    color: $red;
+}
+
+main, #product-list {
+    justify-content: space-between;
+}
+main h2 {
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+article.product-card {
+    background: $black;
+    border-bottom: 1rem solid $green;
+    width: 31%;
+    overflow: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: $white;
+    margin-bottom: 2rem;
+}
+article.product-card > * {
+    display: block;
+    clear: both;
+}
+article.product-card img {
+    width: 100%;
+}
+article.product-card a {
+    color: $legoyellow;
+    padding: .5rem 0;
+    text-decoration: none;
+}
+article.product-card h3 {
+    margin: .2rem 0 .5rem 0;
+    text-transform: uppercase;
+}
+article.product-card button {
+    background: $green;
+    color: $white;
+    font-family: $legofont;
+    border: none;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+}
+article.product-card button[disabled], 
+article.product-card button:disabled {
+    background-color: #ccc;
+}
+
+#cartview {
+    background: $black;
+    border-left: .5rem solid $green;
+    border-bottom: .5rem solid $green;
+    color: $white;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    min-height: 100px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    transition: ease-in-out .4s;
+}
+#cartview ul {
+    list-style-type: none;
+    padding: 0;
+}
+#cartview li {
+    width: 100%;
+    display: flex;
+    clear: both;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid $green;
+    margin-bottom: .5rem;
+    transition: ease-in-out .7s;
+}
+#cartview span {
+    display: inline-block;
+    box-sizing: border-box;
+}
+#cartview .title {
+    width: calc(100% - 11rem);
+}
+#cartview .price {
+    width: 2rem;
+}
+#cartview .quantity {
+    display: flex;
+    margin: 0 .5rem;
+}
+#cartview .quantity button {
+    font-size: 1.5rem;
+}
+#cartview .quantity input {
+    width: 2rem;
+    font-size: 1rem;
+    font-family: $legofont;
+    text-align: center;
+}
+#cartview .delete {
+    width: 2rem;
+    height: 2rem;
+    background: $red;
+    border-radius: 50%;
+    color: $white;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
